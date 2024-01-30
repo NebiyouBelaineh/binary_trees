@@ -33,4 +33,6 @@ typedef struct binary_tree_s heap_t;
 void binary_tree_print(const binary_tree_t *);
 /* creates binary tree node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+/* inserts a node as the left-child of another node */
+binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 #endif /*BINARY_TREES_H*/
