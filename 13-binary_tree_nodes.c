@@ -11,9 +11,11 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
+    /* Checks for leaf nodes and then returns 0 */
 	if ((!tree->left && !tree->right))
 		return (0);
 
+    /* Add 1 for every non-leaf node, i.e node with at least 1 child*/
 	nwchild = binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right) + 1;
 
 	return (nwchild);
