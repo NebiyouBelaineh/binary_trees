@@ -21,6 +21,7 @@ struct binary_tree_s
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 typedef struct binary_tree_s binary_tree_t;
 /* Binary Search Tree */
@@ -49,5 +50,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 /* Traveres through a tree in post-order traversal */
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+/* Measures the height of a binary tree */
+size_t binary_tree_height(const binary_tree_t *tree);
 
 #endif /*BINARY_TREES_H*/
