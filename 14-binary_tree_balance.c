@@ -14,14 +14,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-	/**
-	 * finds the balance factor for the binary tree
-	 * This means BF = hL - hR
-	 * where, BF is balance factor, hL is height of the left subtree,
-	 * and hR is the height of the right subtree.
-	 * We will use the height finder function binary_tree_height() for both
-	 * hL and hR then subtract and return the difference
-	 */
+
 	hL = tree_height(tree->left);
 	hR = tree_height(tree->right);
 
