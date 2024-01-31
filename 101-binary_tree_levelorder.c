@@ -31,12 +31,10 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 
 	free(queue);
 }
-
 /**
 * createQueue - creates an empty queue
 * Return: returns the create queue
 */
-
 queue_t *createQueue(void)
 {
 	queue_t *newQueue;
@@ -46,7 +44,6 @@ queue_t *createQueue(void)
 
 	return (newQueue);
 }
-
 
 /**
 * enqueue - enqueue a node into the queue
