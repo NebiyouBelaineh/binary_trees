@@ -17,12 +17,6 @@ struct binary_tree_s
 	struct binary_tree_s *left;
 	struct binary_tree_s *right;
 };
-
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-
 typedef struct binary_tree_s binary_tree_t;
 /* Binary Search Tree */
 typedef struct binary_tree_s bst_t;
@@ -30,14 +24,46 @@ typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 /* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
+/**
+* struct queue_node - for storing nodes in a queue
+*
+* @node: the node being stored
+* @next: pointer to the next node in the queue
+*/
+typedef struct queue_node
+{
+	binary_tree_t *node;
+	struct queue_node *next;
+} queue_node_t;
+
+/**
+* struct queue - struct datastrucutre for queue
+*
+* @front: pointer to the front of the queue
+* @rear: pointer to the rear of the queue
+*/
+typedef struct queue
+{
+	queue_node_t *front;
+	queue_node_t *rear;
+} queue_t;
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+
 /* Tree Print Function */
 void binary_tree_print(const binary_tree_t *);
 /* creates binary tree node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+
 /* inserts a node as the left-child of another node */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+
 /* inserts a node as the right child of another node */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+
 /* deltes an entire binary tree */
 void binary_tree_delete(binary_tree_t *tree);
 /* checks if a node is a leaf */
@@ -73,4 +99,14 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* finds the lowest common ancestor of two nodes*/
 binary_tree_t *binary_trees_ancestor(
 	const binary_tree_t *first, const binary_tree_t *second);
+/* goes through a binary tree using level-order traversal */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+/* creates an empty queue */
+queue_t *createQueue(void);
+/* adds node to a queue */
+void enqueue(queue_t *queue, binary_tree_t *node);
+/* dequeues a node */
+binary_tree_t *dequeue(queue_t *queue);
+
+
 #endif /*BINARY_TREES_H*/
