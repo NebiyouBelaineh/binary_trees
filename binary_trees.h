@@ -107,6 +107,6 @@ queue_t *createQueue(void);
 void enqueue(queue_t *queue, binary_tree_t *node);
 /* dequeues a node */
 binary_tree_t *dequeue(queue_t *queue);
-
-
+/*Checks if tree is complete*/
+int binary_tree_is_complete(const binary_tree_t *tree);
 #endif /*BINARY_TREES_H*/
