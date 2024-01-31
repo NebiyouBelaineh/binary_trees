@@ -1,2 +1,13 @@
 *main.c
 0-node
+*.txt
+.vscode/
+11-size
+13-nodes
+2-right
+4-leaf
+6-pre
+8-post
+9-height
+test
+16-perfect
