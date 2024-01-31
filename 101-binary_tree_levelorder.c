@@ -8,11 +8,12 @@
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	binary_tree_t *current;
+	queue_t *queue;
 
 	if (!tree || !func)
 		return;
 
-	queue_t *queue = createQueue();
+	queue = createQueue();
 
 	enqueue(queue, (binary_tree_t *)tree);
 
@@ -77,11 +78,11 @@ void enqueue(queue_t *queue, binary_tree_t *node)
 */
 binary_tree_t *dequeue(queue_t *queue)
 {
-	if (queue->front == NULL)
-		return (NULL);
-
 	queue_node_t *temp;
 	binary_tree_t *node;
+
+	if (queue->front == NULL)
+		return (NULL);
 
 	temp = queue->front;
 	node = temp->node;
