@@ -112,4 +112,6 @@ binary_tree_t *dequeue(queue_t *queue);
 int binary_tree_is_complete(const binary_tree_t *tree);
 /* checks if a binary tree is a BST */
 int binary_tree_is_bst(const binary_tree_t *tree);
+/* inserts a value in a Binary Search Tree */
+bst_t *bst_insert(bst_t **tree, int value);
 #endif /*BINARY_TREES_H*/

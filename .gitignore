@@ -18,3 +18,4 @@ test
 102-complete
 7-in
 110-is_bst
+111-bst_insert
