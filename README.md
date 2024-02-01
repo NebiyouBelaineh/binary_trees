@@ -1,2 +1,2 @@
 # Binary Trees
-Project done during Full Stack
+Project done during Full Stack Software
