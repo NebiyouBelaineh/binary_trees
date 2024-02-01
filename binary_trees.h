@@ -114,4 +114,6 @@ int binary_tree_is_complete(const binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 /* inserts a value in a Binary Search Tree */
 bst_t *bst_insert(bst_t **tree, int value);
+/* builds a Binary Search Tree from an array */
+bst_t *array_to_bst(int *array, size_t size);
 #endif /*BINARY_TREES_H*/
