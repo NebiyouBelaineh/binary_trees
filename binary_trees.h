@@ -122,4 +122,6 @@ bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 /* searches for a value in a binary search tree. */
 bst_t *bst_search(const bst_t *tree, int value);
+/* removes a node from a binary search tree */
+bst_t *bst_remove(bst_t *root, int value);
 #endif /*BINARY_TREES_H*/
