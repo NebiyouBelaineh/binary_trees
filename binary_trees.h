@@ -109,4 +109,6 @@ void enqueue(queue_t *queue, binary_tree_t *node);
 binary_tree_t *dequeue(queue_t *queue);
 /*Checks if tree is complete*/
 int binary_tree_is_complete(const binary_tree_t *tree);
+/* performs a left-rotation on a binary tree */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 #endif /*BINARY_TREES_H*/
