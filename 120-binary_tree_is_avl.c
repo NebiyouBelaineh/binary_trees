@@ -1,6 +1,23 @@
 #include "binary_trees.h"
 int tree_is_avl(const binary_tree_t *tree);
 size_t tree_height(const binary_tree_t *tree);
+int tree_is_bst(const binary_tree_t *tree, int min, int max);
+
+/**
+* binary_tree_is_avl - checks if a binary tree is a valid AVL tree
+* @tree: pointer to the root node of the tree to check
+* Return: 1 if tree is a valid AVL tree, 0 otherwise
+*/
+int binary_tree_is_avl(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+
+	/* checks if tree is a valid BST first */
+	if (!tree_is_bst(tree, INT_MIN, INT_MAX))
+		return (0);
+	return (tree_is_avl(tree));
+}
 
 /**
 * tree_is_bst - helper function to check left and right subtree for BST
@@ -21,18 +38,6 @@ int tree_is_bst(const binary_tree_t *tree, int min, int max)
 	tree_is_bst(tree->right, tree->n, max));
 }
 
-/**
-* binary_tree_is_avl - checks if a binary tree is a valid AVL tree
-* @tree: pointer to the root node of the tree to check
-* Return: 1 if tree is a valid AVL tree, 0 otherwise
-*/
-int binary_tree_is_avl(const binary_tree_t *tree)
-{
-	/* checks if tree is a valid BST first */
-	if (!tree_is_bst(tree, INT_MIN, INT_MAX))
-		return (0);
-	return (tree_is_avl(tree));
-}
 
 /**
 * tree_is_avl - helper function recursively checks if a tree is an AVL tree
