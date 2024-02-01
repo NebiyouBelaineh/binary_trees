@@ -120,4 +120,6 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 /* builds a Binary Search Tree from an array */
 bst_t *array_to_bst(int *array, size_t size);
+/* searches for a value in a binary search tree. */
+bst_t *bst_search(const bst_t *tree, int value);
 #endif /*BINARY_TREES_H*/
