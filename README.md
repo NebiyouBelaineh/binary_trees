@@ -7,4 +7,4 @@ Project done during Full Stack Software Engineering studies at ALX School. It ai
 
 ## Authors
 * [@NebiyouBelaineh](https://github.com/NebiyouBelaineh)
-* [@sethgreen23]
+* [@sethgreen23](https://github.com/sethgreen23)
