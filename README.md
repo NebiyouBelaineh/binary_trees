@@ -1,2 +1,2 @@
 # Binary Trees
-Project done during Full Stack Software Engineering studies
+Project done during Full Stack Software Engineering studies at
