@@ -3,4 +3,5 @@ Project done during Full Stack Software Engineering studies at ALX School. It ai
 
 ## Technologies
 * C files compiled using ```gcc```
+* Tested on Ubuntu 20.04 LTS
 
