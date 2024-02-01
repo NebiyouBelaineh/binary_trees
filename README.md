@@ -5,3 +5,6 @@ Project done during Full Stack Software Engineering studies at ALX School. It ai
 * C files compiled using ```gcc```
 * Tested on Ubuntu 20.04 LTS
 
+## Authors
+* [@NebiyouBelaineh](https://github.com/NebiyouBelaineh)
+* [@sethgreen23]
