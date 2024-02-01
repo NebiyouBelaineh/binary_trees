@@ -8,7 +8,8 @@
 */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	size_t index;
+	int exist = 0;
+	size_t index, i;
 	bst_t *root = NULL;
 
 	if (array == NULL || size == 0)
@@ -17,6 +18,14 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	for (index = 0; index < size; index++)
 	{
+		exist = 0;
+		for (i = 0; i < index ; i++)
+			if (array[index] == array[i])
+			{
+				exist = 1;
+			}
+		if (exist)
+			continue;
 		if (!(bst_insert(&root, array[index])))
 			return (NULL);
 	}
