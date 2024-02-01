@@ -126,4 +126,6 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 /* checks if a binary tree is a valid AVL Tree */
 int binary_tree_is_avl(const binary_tree_t *tree);
+/* inserts a value in an AVL Tree */
+avl_t *avl_insert(avl_t **tree, int value);
 #endif /*BINARY_TREES_H*/
